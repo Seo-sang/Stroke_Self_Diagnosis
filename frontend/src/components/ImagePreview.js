@@ -170,7 +170,6 @@ export const ImagePreview = ({showImagePreview, setShowImagePreview}) => {
                             <p>좌측 눈과 우측 눈 : {eye_length}</p>
                             <p>좌측 입술과 우측 입술 : {lip_length}</p>
                             <p>좌측 코끝과 우측 코끝 : {nose_length}</p> 
-                            <p>사진 촬영 규칙을 지키지 않았거나 얼굴이 수평으로 찍히지 않았을 경우 검사 결과가 정확하지 않을 수 있으니 다시 시도해주시기 바랍니다.</p>
                     </ModalContent>     
                     <ModalImg src={"data:image/jpeg;base64,"+image}
                     style={{

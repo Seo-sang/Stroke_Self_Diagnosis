@@ -30,7 +30,6 @@ class ReactAppView(View):
             return HttpResponse(status=501,)
         
     def post(self, request):
-        print("결과가 왜 이래")
         data = json.loads(request.body)
         ide = data['description']
         doc = data['document']
@@ -39,7 +38,7 @@ class ReactAppView(View):
 
         ide = settings.MEDIA_ROOT_URL + settings.MEDIA_URL + ide + "_new.jpg"
 
-        result_str, cropped_img, eye_rate, lip_rate, nose_rate = result_main(new_doc, True, ide)
+        result_str, cropped_img, eye_rate, lip_rate, nose_rate = result_main(new_doc, ide)
 
         #result_str, cropped_img, LEFT_EYE_X, LEFT_LIP_X, RIGHT_EYE_X, RIGHT_LIP_X, LEFT_EYE_Y, LEFT_LIP_Y, RIGHT_EYE_Y, RIGHT_LIP_Y = result_main(new_doc, True, ide)
         context = {"result":result_str, "image":cropped_img, "eye_rate":eye_rate, "lip_rate":lip_rate, "nose_rate":nose_rate}

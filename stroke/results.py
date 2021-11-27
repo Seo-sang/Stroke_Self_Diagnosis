@@ -384,12 +384,7 @@ def use_string(FilePath, base_64_img):
         return False, cropped_img, eye_rate, lip_rate, nose_rate
 
 
-def result_main(base_64_img, is_string, Filepath):
-    is_stroke = True
-    if is_string == True:
-        is_stroke, cropped_img, eye_rate, lip_rate, nose_rate = use_string(Filepath, base_64_img)
-        return is_stroke, cropped_img, eye_rate, lip_rate, nose_rate
-        #return is_stroke, cropped_img, LEFT_EYE[0][0], LEFT_LIP[0][0], RIGHT_EYE[0][0], RIGHT_LIP[0][0], LEFT_EYE[0][1], LEFT_LIP[0][1], RIGHT_EYE[0][1], RIGHT_LIP[0][1]
-    elif is_string == False:
-        is_stroke, cropped_img = use_image(base_64_img)
-        return is_stroke, cropped_img
+def result_main(base_64_img, Filepath):
+    is_stroke, cropped_img, eye_rate, lip_rate, nose_rate = use_string(Filepath, base_64_img)
+    return is_stroke, cropped_img, eye_rate, lip_rate, nose_rate
+    #return is_stroke, cropped_img, LEFT_EYE[0][0], LEFT_LIP[0][0], RIGHT_EYE[0][0], RIGHT_LIP[0][0], LEFT_EYE[0][1], LEFT_LIP[0][1], RIGHT_EYE[0][1], RIGHT_LIP[0][1]
