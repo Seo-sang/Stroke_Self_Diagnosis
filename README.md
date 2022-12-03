@@ -2,7 +2,7 @@
 
 ## 안면 인식을 통해 안면 장애를 판단하여 뇌졸중 증상을 판단하는 웹 프로젝트입니다.
 
-\\<!--
+<!--
 # Setting Nginx and uwsgi
 
 Need to setting this texts to launch server
